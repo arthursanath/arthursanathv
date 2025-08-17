@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anubhav Acharya | Portfolio</title>
+  <meta name="description" content="Mechanical Engineer portfolio showcasing CAD, CFD, and NPD projects.">
+  <link rel="stylesheet" href="style.css">
+  <!-- model-viewer (3D) -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div style="font-weight:800;letter-spacing:.3px">Anubhav Acharya</div>
+      <div class="links">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="resume/Anubhav_Acharya_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="card">
+        <h1 style="margin-top:0;font-size:38px;line-height:1.1">Design Engineer · CAD · CFD</h1>
+        <p style="color:var(--muted);font-size:18px">
+          Mechanical/NPD engineer focused on <b>CAD assemblies</b>, <b>fixture design</b>, and <b>CFD & FEA</b>.
+          SAE BAJA / E‑ATVC experience. Open to CFD & vehicle dynamics roles.
+        </p>
+        <div style="margin-top:16px">
+          <span class="tag">SolidWorks</span>
+          <span class="tag">ANSYS/Fluent</span>
+          <span class="tag">MATLAB/Simulink</span>
+          <span class="tag">Python</span>
+        </div>
+        <div style="margin-top:22px">
+          <a class="btn" href="#projects">View Projects</a>
+          <a style="margin-left:10px" href="mailto:you@example.com">Email</a>
+        </div>
+      </div>
+      <img class="card" src="images/hero.png" alt="Hero image placeholder">
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="grid projects">
+        <article class="card">
+          <img src="images/project1.png" alt="Project render" style="width:100%;border-radius:10px">
+          <h3>Chassis Design · SAE BAJA</h3>
+          <p style="color:var(--muted)">Full assembly model, weight optimization, weldment drawings, FEA hotspots.</p>
+          <a class="btn" href="#viewer">Open 3D Viewer</a>
+        </article>
+
+        <article class="card">
+          <img src="images/project2.png" alt="Project render" style="width:100%;border-radius:10px">
+          <h3>CFD: Duct Flow Optimization</h3>
+          <p style="color:var(--muted)">Mesh strategy (y+), turbulence model comparison, ∆p vs. mass flow tradeoffs.</p>
+        </article>
+
+        <article class="card">
+          <img src="images/project2.png" alt="Project render" style="width:100%;border-radius:10px">
+          <h3>Fixture Design · Aerospace NPD</h3>
+          <p style="color:var(--muted)">Cycle-time reduction with modular fixture concept; tolerance stack-up study.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="viewer" style="margin-top:40px">
+      <h2>Interactive 3D Viewer</h2>
+      <div class="model-panel">
+        <!-- HOW TO USE:
+          1) Export your CAD model to .glb (recommended) or .gltf.
+          2) Put the file into /models/, e.g., /models/chassis.glb
+          3) Update the 'src' below to point at your file.
+        -->
+        <model-viewer src="models/example.glb"
+          alt="Your CAD model (.glb)"
+          camera-controls auto-rotate
+          poster="images/project1.png"
+          exposure="1.0" shadow-intensity="1">
+        </model-viewer>
+        <p style="color:var(--muted);margin-top:8px">
+          Replace <code>models/example.glb</code> with your file (e.g., <code>models/chassis.glb</code>). Large files (>25–50&nbsp;MB) will load slowly.
+        </p>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:40px">
+      <h2>Skills</h2>
+      <div class="card">
+        <p><b>Design & Simulation:</b> SolidWorks, Weldments, Drawings, ANSYS Fluent, FEA</p>
+        <p><b>Programming:</b> Python, MATLAB scripts</p>
+        <p><b>Domains:</b> Vehicle Dynamics, Fluid Mechanics, Fixture/NPD</p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:40px">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>LinkedIn: <a href="#" target="_blank" rel="noopener">Add your link</a> · GitHub: <a href="#" target="_blank" rel="noopener">Add your link</a></p>
+      </div>
+    </section>
+
+    <footer class="container">
+      <small>© <span id="y"></span> Anubhav Acharya · Built with GitHub Pages</small>
+    </footer>
+  </div>
+
+  <script>
+    // Update year in footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
